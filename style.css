@@ -161,7 +161,7 @@ input[type="text"] {
   }
 }
 
-@media (width<870px) {
+@media (width<780px) {
   .container {
     width: 90%;
   }
@@ -178,7 +178,7 @@ input[type="text"] {
 
 @media (width>870px) {
   .container {
-    width: 90%;
+    width: 70%;
   }
 
   .details-inner {
