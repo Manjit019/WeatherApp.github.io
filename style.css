@@ -5,8 +5,8 @@
   font-family: Poppins;
 }
 body {
-  background:var(--dark-color);
-  background:url("./images/weather bg.jpg");
+  background: var(--dark-color);
+  background: url("./images/weather bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -161,20 +161,32 @@ input[type="text"] {
   }
 }
 
+@media (width<850px) {
+  .container {
+    width: 90%;
+  }
 
-@media(width<850px){
-
-    .container{
-        width: 90%;
-    }
-
-    
-.details-inner {
+  .details-inner {
     & p b {
       font-size: 1.3rem;
     }
     & .fa-solid {
       font-size: 2rem;
+    }
+  }
+}
+
+@media (width<1280px) {
+  .container {
+    width: 90%;
+  }
+
+  .details-inner {
+    & p b {
+      font-size: 2.3rem;
+    }
+    & .fa-solid {
+      font-size: 4rem;
     }
   }
 }
