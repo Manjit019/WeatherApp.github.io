@@ -6,7 +6,7 @@
 }
 body {
   background:var(--dark-color);
-  background:url("images/weather bg.jpg");
+  background:url("./images/weather bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
