@@ -161,7 +161,7 @@ input[type="text"] {
   }
 }
 
-@media (width<850px) {
+@media (width<870px) {
   .container {
     width: 90%;
   }
@@ -176,7 +176,7 @@ input[type="text"] {
   }
 }
 
-@media (width<1280px) {
+@media (width>870px) {
   .container {
     width: 90%;
   }
