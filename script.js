@@ -1,6 +1,6 @@
 
 const apikey = "0904058356e87443560b817fe59b3c53";
-const apiurl = "../../../https:api.openweathermap.org/data/2.5/weather?units=metric";
+const apiurl = ".../https://api.openweathermap.org/data/2.5/weather?units=metric";
 
 const date = new Date();
 document.querySelector(".current-date").innerHTML = date.toDateString();
