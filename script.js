@@ -57,3 +57,21 @@ SearchBtn.addEventListener("click", () => {
 
 city = localStorage.getItem("city");
 checkWeather(city);
+
+
+// Dark mode component 
+
+const icon = document.querySelector(".icon");
+icon.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-theme");
+
+    if (document.body.classList.contains("light-theme")) {
+        icon.classList.remove("fa-moon")
+        icon.classList.add("fa-sun");
+    }
+    else {
+        icon.classList.add("fa-moon")
+        icon.classList.remove("fa-sun");
+    }
+})

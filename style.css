@@ -5,27 +5,45 @@
   font-family: Poppins;
 }
 body {
-  background: var(--dark-color);
+  /* background-image: linear-gradient(var(--dark-color),var(--supporting-color)), url("./images/weather bg.jpg"); */
   background: url("./images/weather bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment:scroll;
+  background-attachment: scroll;
+  background-blend-mode: color-dodge;
 }
 :root {
   --main-color: #365486;
-  --supporting-color: #bee5e3;
-  --bg-color: #dcf2f1;
+  --supporting-color: #06082c38;
+  --bg-color: #0f103577;
   --dark-color: #0f1035;
   --white-color: #ffffff;
+}
+.light-theme {
+  --main-color: #365486;
+  --supporting-color: #ffffff50;
+  --bg-color: #ffffffaa;
+  --dark-color:#fff ;
+  --white-color: #0f1035;
+}
+
+h4,
+h3,
+h2,
+h5,
+p {
+  color: var(--white-color);
 }
 header {
   width: 100%;
   height: auto;
-  background-color: var(--main-color);
+  background-color: var(--dark-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding:1rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -35,8 +53,16 @@ header {
     font-weight: 700;
     text-transform: uppercase;
   }
-}
+  & .theme-icons {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    color: var(--white-color);
 
+    & .icon:hover{
+      cursor: pointer;
+    }
+  }
+}
 
 .container {
   width: 35%;
@@ -51,6 +77,7 @@ header {
   backdrop-filter: blur(10px);
   opacity: 0.8;
   position: relative;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px ;
 }
 
 .search-box {
@@ -72,6 +99,10 @@ input[type="text"] {
 
   &:focus {
     outline: none;
+    color: var(--dark-color);
+  }
+  &::placeholder{
+    color: var(--dark-color);
   }
 }
 
@@ -80,7 +111,8 @@ input[type="text"] {
   height: 2rem;
   border: none;
   padding: 10px;
-  background: var(--white-color);
+  color: var(--dark-color);
+  background-color: var(--white-color);
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -91,10 +123,12 @@ input[type="text"] {
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   &:hover {
-    color: white;
-    background: var(--main-color);
+    filter: invert(1);
     cursor: pointer;
+    color: var(--dark-color);
+    -webkit-filter: invert(1);
   }
 }
 .error {
@@ -118,7 +152,7 @@ input[type="text"] {
 
   .current-date {
     font-size: 16px;
-    color: var(--main-color);
+    color:var(--dark-color);
     font-weight: 500;
     text-transform: capitalize;
   }
@@ -128,6 +162,7 @@ input[type="text"] {
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
     background-color: var(--bg-color);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -139,11 +174,11 @@ input[type="text"] {
 
     & h2 {
       font-size: 4rem;
-      color: var(--main-color);
+      color: var(--white-color);
       & span {
         font-size: 2rem;
         font-weight: 500;
-        color: var(--dark-color);
+        color: var(--white-color);
       }
     }
 
@@ -164,6 +199,7 @@ input[type="text"] {
   width: 100%;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
+  color: var(--white-color);
   background-color: var(--bg-color);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -173,6 +209,10 @@ input[type="text"] {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+
+  & p{
+    font-size: 15px;
+  }
 }
 .details-inner {
   padding: 10px 0;
@@ -181,10 +221,12 @@ input[type="text"] {
   justify-content: space-evenly;
   gap: 1rem;
   & p b {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    color: var(--white-color);
   }
   & .fa-solid {
     font-size: 3rem;
+    color: var(--white-color);
   }
 }
 /* copyright section  */
@@ -204,11 +246,10 @@ input[type="text"] {
   & .social {
     display: flex;
     gap: 1rem;
-   
   }
   & .fa-brands {
     color: var(--dark-color);
-    background-color: var(--bg-color);
+    background-color: var(--white-color);
     padding: 6px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -216,7 +257,7 @@ input[type="text"] {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   }
