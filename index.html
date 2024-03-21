@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href=".\images\favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href=".\images\favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,53 +18,116 @@
     ></script>
   </head>
   <body>
+
+  
+      <header>
+        <i class="fa-solid fa-code" style="color: #FFD43B;"></i>
+        <div class="left-nav">Manjit's Weather App </div>
+      </header>
+
+
     <div class="container">
       <div class="search-box">
-        <input type="text" name="search" id="search" placeholder="Enter Your City ">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Enter Your City "
+        />
         <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
       </div>
+      <div class="error">Invalid city !</div>
       <div class="Weather">
-        <h3>📍Hajipur Vaishali,Bihar 84401</h3>
-        <P class="current-date">WED 10:40 PM 20 Feb 2024</P>
+        <h3 class="city"></h3>
+        <p class="current-date"></p>
         <div class="temp">
-          <h2>26<span>°C</span></h2>
-          <img src="./images/cloudy.png" alt="cloudy weather" />
+          <h2>0<span>°C</span></h2>
+          <img
+            src="./images/cloudy.png"
+            alt="cloudy weather"
+            class="weather-icon"
+          />
         </div>
       </div>
       <h4>Current Conditions</h4>
       <div class="details-container">
         <div class="details">
           <p><b>Wind</b></p>
-          <div class="details-inner">
-            <p><b>16</b>kph</p>
+          <div class="details-inner Wind">
+            <p><b>0</b>kph</p>
             <i class="fa-solid fa-wind"></i>
           </div>
         </div>
 
         <div class="details">
           <p><b>Humidity</b></p>
-          <div class="details-inner">
-            <p><b>90</b>%</p>
+          <div class="details-inner Humidity">
+            <p><b>0</b>%</p>
             <i class="fa-solid fa-water"></i>
           </div>
         </div>
 
         <div class="details">
           <p><b>Pressure</b></p>
-          <div class="details-inner">
-            <p><b>1020</b>mBar</p>
+          <div class="details-inner Pressure">
+            <p><b>0</b>mBar</p>
             <i class="fa-solid fa-volcano"></i>
           </div>
         </div>
 
         <div class="details">
-            <p><b>UV index</b></p>
-            <div class="details-inner">
-              <p><b>0</b>low</p>
-              <i class="fa-solid fa-circle-notch"></i>
-            </div>
+          <p><b>Visibility</b></p>
+          <div class="details-inner Visibility">
+            <p><b>0</b>km</p>
+            <i class="fa-solid fa-road"></i>
           </div>
+        </div>
       </div>
     </div>
+
+    <div class="copyright">
+      <h5>Copyright ©2024 Manjit All rights Reserved</h5>
+      <h6 style="color: rgb(255, 170, 0)">
+        Made by
+        <a href="#" target="_blank"
+          ><strong
+            style="
+              background-color: #2b8e9de3;
+              color: rgb(255, 255, 0);
+              padding: 3px 8px;
+              border-radius: 20px;
+            "
+            >Manjit</strong
+          ></a
+        >
+      </h6>
+      <div class="social">
+        <a href="https://www.instagram.com/.manjitk.019_____" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          href="https://m.facebook.com/p/Manjit-Kumar-100051075008192/?wtsid=rdr_0jBLrmR72ct9vll4A"
+          target="_blank"
+        >
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a
+          href="https://x.com/MNCreativezone2?t=5RdojkrHk5LuMGHt_gcgnw&s=09"
+          target="_blank"
+        >
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a href="https://github.com/Ssoftwaredeveloper21" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/manjit-kumar-b33a11264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+    <script src="script.js" type="text/JavaScript"></script>
   </body>
 </html>
