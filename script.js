@@ -14,7 +14,7 @@ const SearchBtn = document.getElementById("search-btn");
 const weatherIcon = document.querySelector(".weather-icon");
 
 let hours = new Date().getHours();
-if (hours => 19 && hours <= 24) {
+if (hours => 19 && hours <6) {
     weatherIcon.src = "./images/cloudy-night.png";
 }
 
@@ -33,6 +33,7 @@ async function checkWeather(city) {
     }
     document.querySelector(".temp h2").innerHTML = Math.round(data.main.temp) + `<sup><span>°C</span></sup>`;
     document.querySelector(".Wind b").innerHTML = data.wind.speed;
+    document.querySelector(".description").innerHTML=data.weather[0].main;
     document.querySelector(".Humidity b").innerHTML = data.main.humidity;
     document.querySelector(".Pressure b").innerHTML = data.main.pressure;
     document.querySelector(".Visibility b").innerHTML = data.visibility / 1000;
